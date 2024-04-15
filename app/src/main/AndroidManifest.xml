@@ -10,13 +10,15 @@
         android:icon="@color/white"
         android:theme="@style/AppTheme.NoActionBar">
 
-        <activity android:name=".reto2">
+        <activity android:name=".reto3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".reto2_inicio"/>
+
+        <activity android:name=".reto3_menu"/>
     </application>
 
 </manifest>

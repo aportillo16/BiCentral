@@ -3,4 +3,10 @@
     <string name="estado">Estado</string>
     <string name="estado2">Estado2</string>
     <string name="Ingresar">Ingresar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragmen_home">Fragmen Home</string>
+    <string name="fragment_library">Fragment Library</string>
+    <string name="fragment_shorts">Fragment Shorts</string>
+    <string name="fragment_subscriptions">Fragment Subscriptions</string>
 </resources>
