@@ -5,8 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="16dp"
-    android:background="@color/azul_bi"
-    tools:context=".reto3">
+    android:background="@color/azul_bi">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -64,6 +63,13 @@
                 android:textAllCaps="false"
                 android:text="Recuperar contraseña"
                 android:layout_gravity="center_horizontal"/>
+
+            <ProgressBar
+                android:id="@+id/idLoadingPB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
 
         </com.google.android.material.card.MaterialCardView>
 

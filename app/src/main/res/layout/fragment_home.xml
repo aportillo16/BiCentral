@@ -1,17 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lavender"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorAccent"
     tools:context=".HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_wallet"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="560dp"
+        android:background="@color/white"
+        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/imgViewUser"
+            android:layout_width="155dp"
+            android:layout_height="155dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_action_user"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/edTName"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="270dp"
+        android:ems="50"
+        android:hint=" Nombre"
+        android:inputType="textPersonName"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+    <EditText
+        android:id="@+id/edTAddress"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="340dp"
+        android:ems="50"
+        android:hint="Dirección"
+        android:inputType="textMultiLine"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="340dp"
         android:text="@string/fragmen_home"
         android:gravity="center"
         android:textSize="30dp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/colorAccent"/>
 
-</FrameLayout>
+</RelativeLayout>

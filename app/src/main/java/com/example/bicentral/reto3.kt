@@ -5,11 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.api.local_api
-import com.example.bicentral.databinding.Reto2Binding
 import com.example.bicentral.databinding.Reto3Binding
 
 class reto3 : AppCompatActivity(), View.OnClickListener {

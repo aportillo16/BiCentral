@@ -13,7 +13,6 @@ class reto3_menu: AppCompatActivity() {
 
         binding = Reto3MenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//setOnItemSelectedListener
 
         replaceFragment(HomeFragment())
         binding.bottomNavigationView.setOnNavigationItemSelectedListener{
