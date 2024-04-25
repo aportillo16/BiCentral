@@ -10,4 +10,5 @@ Para visualizar cada uno de los retos, únicamente es necesario modificar el And
 Modificar el android:name por las siguientes opciones:
 - reto1
 - reto2
+- reto3
 - com.example.reto4.reto4
