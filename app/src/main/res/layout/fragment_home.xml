@@ -7,25 +7,16 @@
     android:background="@color/colorAccent"
     tools:context=".HomeFragment">
 
-    <androidx.cardview.widget.CardView
+
+    <ImageView
+        android:id="@+id/imgViewUser"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_wallet"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        app:cardCornerRadius="560dp"
-        android:background="@color/white"
-        android:layout_gravity="center">
-        <ImageView
-            android:id="@+id/imgViewUser"
-            android:layout_width="155dp"
-            android:layout_height="155dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/ic_action_user"
-            android:scaleType="centerCrop"/>
-    </androidx.cardview.widget.CardView>
+        android:scaleType="centerCrop"/>
 
     <EditText
         android:id="@+id/edTName"

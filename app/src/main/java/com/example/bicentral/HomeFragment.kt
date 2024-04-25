@@ -1,19 +1,13 @@
 package com.example.bicentral
 
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.bicentral.databinding.FragmentHomeBinding
-import okio.IOException
-import java.io.InputStream
-import java.net.HttpURLConnection
-import java.net.URL
-
+import com.example.reto4.PicassoCircleTransformation
+import com.squareup.picasso.Picasso
 
 class HomeFragment : Fragment() {
 
@@ -30,50 +24,17 @@ class HomeFragment : Fragment() {
 
         binding.edTName.setText(activity?.intent?.getStringExtra("name"))
         binding.edTAddress.setText(activity?.intent?.getStringExtra("address"))
-        //binding.imgViewUser.load(activity?.intent?.getStringExtra("imageurl"))
 
-        /*val url = URL(activity?.intent?.getStringExtra("imageurl"))
-        val image = BitmapFactory.decodeStream(url.openConnection().getInputStream())
+        //PicassoRoundedCornerTransformation(38.0f)
 
-        binding.imgViewUser.setImageBitmap(image)*/
+        val url = activity?.intent?.getStringExtra("imageurl")
+        val imageView = binding.imgViewUser
 
-        val thread = Thread {
-            try {
-                binding.imgViewUser.setImageBitmap(getBitmapFromURL(activity?.intent?.getStringExtra("imageurl")))
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
+        Picasso.get().load(url)
+            .transform(PicassoCircleTransformation())
+            .placeholder(R.drawable.ic_action_user)
+            .into(imageView)
 
-        thread.start()
         return view
     }
-
-    /*fun convertBitmapToByteArrayUncompressed(bitmap: Bitmap): ByteArray? {
-        val byteBuffer: ByteBuffer = ByteBuffer.allocate(bitmap.byteCount)
-        bitmap.copyPixelsToBuffer(byteBuffer)
-        byteBuffer.rewind()
-        return byteBuffer.array()
-    }*/
-
-    private fun getBitmapFromURL(src: String?): Bitmap? {
-        return try {
-            val url = URL(src)
-            val connection: HttpURLConnection = url
-                .openConnection() as HttpURLConnection
-            connection.doInput = true
-            connection.connect()
-            val input: InputStream = connection.inputStream
-            BitmapFactory.decodeStream(input)
-        } catch (e: Exception) {
-            Log.d("vk21", e.toString())
-            null
-        }
-    }
-
-    /*
-    val url = URL(activity?.intent?.getStringExtra("imageurl"))
-                val image = BitmapFactory.decodeStream(url.openConnection().getInputStream())
-
-                binding.imgViewUser.setImageBitmap(image)*/
 }
