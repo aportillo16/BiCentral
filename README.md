@@ -7,7 +7,7 @@ Para visualizar cada uno de los retos, únicamente es necesario modificar el And
             </intent-filter>
         </activity>"
 
-Modificar el name por las siguientes opciones:
+Modificar el android:name por las siguientes opciones:
 - reto1
 - reto2
-- reto3
+- com.example.reto4.reto4
